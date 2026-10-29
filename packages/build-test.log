@@ -1,0 +1,42 @@
+    Finished `release` profile [optimized] target(s) in 0.05s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.05s
+     Running unittests src/lib.rs (target/debug/deps/swissfer-e0ce232f2e03079a)
+
+running 6 tests
+test api::chunks::tests::exact_multiple_has_no_trailing_chunk ... ok
+test api::chunks::tests::splits_on_the_chunk_boundary ... ok
+test api::chunks::tests::empty_file_is_still_one_part ... ok
+test swissfiles::swissfile::tests::keeps_a_quoted_etag ... ok
+test swissfiles::swissfile::tests::ignores_other_headers ... ok
+test swissfiles::swissfile::tests::requotes_a_bare_etag ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/swissfer-4ced92c4234a3979)
+
+running 11 tests
+test api::chunks::tests::empty_file_is_still_one_part ... ok
+test api::chunks::tests::exact_multiple_has_no_trailing_chunk ... ok
+test api::chunks::tests::splits_on_the_chunk_boundary ... ok
+test swissfiles::swissfile::tests::ignores_other_headers ... ok
+test swissfiles::swissfile::tests::keeps_a_quoted_etag ... ok
+test swissfiles::swissfile::tests::requotes_a_bare_etag ... ok
+test tests::rejects_everything_else ... ok
+test tests::accepts_current_and_legacy_links ... ok
+test tests::test_path_exists ... ok
+test tests::test_validate_duration ... ok
+test tests::test_validate_number_download ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests swissfer
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+dpkg-shlibdeps: warning: diversions involved - output may be incorrect
+ diversion by libc6 from: /lib64/ld-linux-x86-64.so.2
+dpkg-shlibdeps: warning: diversions involved - output may be incorrect
+ diversion by libc6 to: /lib64/ld-linux-x86-64.so.2.usr-is-merged
+dpkg-deb: building package 'swissfer' in '/workspace/artifacts/swissfer_3.0.1-1~deb13u1_amd64.deb'.

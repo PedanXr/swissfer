@@ -1,0 +1,27 @@
+Swissfer 3.0.1 fuer Debian 13 (trixie), amd64
+
+Inoffizielles lokal gebautes Paket; kein offizielles Debian-Paket.
+Upstream: https://github.com/Blutsh/swissfer
+Tag: 3.0.1
+Commit: 87fd6771421dda43cc27c695e14a067429043c17
+Lizenz: GPL-3.0; siehe copyright.
+Der Upstream-Quellcode wurde nicht veraendert.
+Build mit Cargo.lock und OPENSSL_NO_VENDOR=1; verwendet die von Debian
+gepflegten Systembibliotheken fuer OpenSSL und libcurl.
+
+Installation:
+  sudo apt install ./swissfer_3.0.1-1~deb13u1_amd64.deb
+Aufruf:
+  swissfer --help
+  swissfer -e du@example.com /pfad/datei.pdf
+  swissfer 'https://www.swisstransfer.com/dl/TRANSFER-ID'
+Beim ersten Upload muss die Absenderadresse per E-Mail bestaetigt werden.
+Entfernen:
+  sudo apt remove swissfer
+
+Neubau unter Debian 13:
+  sudo apt install build-essential cargo rustc pkg-config libssl-dev libcurl4-openssl-dev dpkg-dev
+  ./packaging/build-deb.sh
+Der Build braucht Zugang zu crates.io. Cargo.lock fixiert die Abhaengigkeiten.
+Die Tests senden keine Dateien an SwissTransfer. Ein echter Upload/Download
+wurde bei der Paketerstellung nicht ausgefuehrt.
